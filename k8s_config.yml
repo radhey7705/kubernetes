@@ -12,8 +12,10 @@ spec:
                         labels:
                                 component: test-api
                 spec:
-                        - containers:
+                        containers:
                                 - name: api-server
                                   image: aecs1/calqlum:latest
                                   ports:
                                           - containerPort: 3000
+                        imagePullSecrets:
+                                          - name: regcred
